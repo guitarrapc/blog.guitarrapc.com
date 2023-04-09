@@ -1,5 +1,11 @@
 # blog.guitarrapc.com
 
+## Deploy
+
+see: https://docs.astro.build/en/guides/deploy/github/
+
+## Getting started
+
 ```
 pnpm create astro@latest
 ```
