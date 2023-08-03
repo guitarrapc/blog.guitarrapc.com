@@ -40,7 +40,10 @@ pnpm create astro@latest
 
                 Stuck? Join us at https://astro.build/chat
 
+Use pnpm v7 as CI use it.
+
 ```
+npm install -g pnpm@v7
 cd blog.guitarrapc.com
 pnpm run dev
 ```
