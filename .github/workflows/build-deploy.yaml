@@ -25,7 +25,9 @@ jobs:
       - name: Show list of directory
         run: ls -l
       - name: Show list of directory (blog.guitarrapc.com)
-        run: ls -l ./blog.guitarrapc.com
+        run: |
+          ls -l ./blog.guitarrapc.com/blog.guitarrapc.com/package.json
+          ls -l /home/runner/work/blog.guitarrapc.com/blog.guitarrapc.com/package.json
       - name: Install, build, and upload your site
         uses: withastro/action@v1
         with:
