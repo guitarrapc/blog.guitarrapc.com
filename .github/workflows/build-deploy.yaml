@@ -21,13 +21,17 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout your repository using git
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
+      - name: Show list of directory (blog.guitarrapc.com)
+        run: |
+          pwd
+          ls -l ./blog.guitarrapc.com
+          readlink -f ./blog.guitarrapc.com/package.json
       - name: Install, build, and upload your site
         uses: withastro/action@v0
         with:
-          path: blog.guitarrapc.com # The root location of your Astro project inside the repository. (optional)
-          node-version: 16
-          package-manager: pnpm # The Node package manager that should be used to install dependencies and build your site. Automatically detected based on your lockfile. (optional)
+          path: blog.guitarrapc.com
+          node-version: 20
 
   deploy:
     if: ${{ github.event_name != 'pull_request' }}
@@ -39,4 +43,4 @@ jobs:
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v1
+        uses: actions/deploy-pages@v3

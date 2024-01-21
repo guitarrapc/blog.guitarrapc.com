@@ -6,6 +6,32 @@ see: https://docs.astro.build/en/guides/deploy/github/
 
 ## Getting started
 
+Use pnpm to install and run.
+
+```shell
+cd blog.guitarrapc.com
+npm install -g pnpm
+pnpm run dev
+```
+
+Update packages with pnpm.
+
+```shell
+pnpm install
+pnpm update
+```
+
+Update specific package.
+
+```
+pnpm add astro@latest
+pnpm add @astro/mdx
+pnpm add @astro/rss
+pnpm add @astro/sitemap
+```
+
+## Create Astro Project
+
 ```
 pnpm create astro@latest
 ```
@@ -39,11 +65,3 @@ pnpm create astro@latest
                 Add frameworks like react or tailwind using astro add.
 
                 Stuck? Join us at https://astro.build/chat
-
-Use pnpm v7 as CI use it.
-
-```
-npm install -g pnpm@v7
-cd blog.guitarrapc.com
-pnpm run dev
-```
