@@ -22,14 +22,11 @@ jobs:
     steps:
       - name: Checkout your repository using git
         uses: actions/checkout@v4
-      - name: Show list of directory
-        run: ls -l
       - name: Show list of directory (blog.guitarrapc.com)
         run: |
           pwd
           ls -l ./blog.guitarrapc.com
           readlink -f ./blog.guitarrapc.com/package.json
-          ls -l /home/runner/work/blog.guitarrapc.com/blog.guitarrapc.com/package.json
       - name: Install, build, and upload your site
         uses: withastro/action@v1
         with:
