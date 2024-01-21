@@ -28,7 +28,7 @@ jobs:
           ls -l ./
           readlink -f ./package.json
       - name: Install, build, and upload your site
-        uses: withastro/action@v0
+        uses: withastro/action@v1
         with:
           node-version: 20
 
