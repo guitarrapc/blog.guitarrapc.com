@@ -26,6 +26,7 @@ jobs:
         run: ls -l
       - name: Show list of directory (blog.guitarrapc.com)
         run: |
+          pwd
           ls -l ./blog.guitarrapc.com/package.json
           ls -l /home/runner/work/blog.guitarrapc.com/blog.guitarrapc.com/package.json
       - name: Install, build, and upload your site
