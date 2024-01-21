@@ -24,7 +24,10 @@ pnpm update
 Update specific package.
 
 ```
-pnpm install PACKAGE_NAME
+pnpm add astro@latest
+pnpm add @astro/mdx
+pnpm add @astro/rss
+pnpm add @astro/sitemap
 ```
 
 ## Create Astro Project
