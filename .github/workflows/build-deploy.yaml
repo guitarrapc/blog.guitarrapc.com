@@ -30,7 +30,7 @@ jobs:
       - name: Install, build, and upload your site
         uses: withastro/action@v1
         with:
-          path: ./blog.guitarrapc.com
+          path: ./blog.guitarrapc.com/blog.guitarrapc.com
           node-version: 20
 
   deploy:
