@@ -2,27 +2,29 @@ name: Deploy to GitHub Pages
 
 on:
   # Trigger the workflow every time you push to the `main` branch
+
   # Using a different branch name? Replace `main` with your branch’s name
+
   push:
     branches: [main]
   pull_request:
     branches: [main]
   # Allows you to run this workflow manually from the Actions tab on GitHub.
-  workflow_dispatch:
 
-# Allow this job to clone the repo and create a page deployment
-permissions:
-  contents: read
-  pages: write
-  id-token: write
-
+  workflow_dispatch: null
 jobs:
   build:
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
     timeout-minutes: 10
     steps:
       - name: Checkout your repository using git
         uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          persist-credentials: false
       - name: Show list of directory (blog.guitarrapc.com)
         run: |
           pwd
@@ -35,9 +37,13 @@ jobs:
           node-version: 20
 
   deploy:
-    if: ${{ github.event_name != 'pull_request' }}
     needs: build
+    if: ${{ github.event_name != 'pull_request' }}
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
     timeout-minutes: 10
     environment:
       name: github-pages
