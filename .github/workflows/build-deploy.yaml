@@ -31,7 +31,7 @@ jobs:
           ls -l ./blog.guitarrapc.com
           readlink -f ./blog.guitarrapc.com/package.json
       - name: Install, build, and upload your site
-        uses: withastro/action@32474c4384d86fc69c1739a9cddc665769fb88b5 # v4.2.0
+        uses: withastro/action@9811f9299d5d37ca0416ca85cee333c7c9485cd1 # v5.0.1
         with:
           path: blog.guitarrapc.com
           node-version: 20
