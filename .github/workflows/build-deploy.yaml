@@ -31,7 +31,7 @@ jobs:
           ls -l ./blog.guitarrapc.com
           readlink -f ./blog.guitarrapc.com/package.json
       - name: Install, build, and upload your site
-        uses: withastro/action@15aa0a5a1e067940253e3b259413ab2ae882a740 # v5.2.0
+        uses: withastro/action@44706356b4eb735f8b9035699eb4796241a040c4 # v6.1.0
         with:
           path: blog.guitarrapc.com
           node-version: 20
@@ -51,4 +51,4 @@ jobs:
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@d6db90164ac5ed86f2b6aed7e0febac5b3c0c03e # v4.0.5
+        uses: actions/deploy-pages@cd2ce8fcbc39b97be8ca5fce6e763baed58fa128 # v5.0.0
