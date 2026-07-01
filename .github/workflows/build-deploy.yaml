@@ -14,7 +14,7 @@ on:
   workflow_dispatch: null
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     permissions:
       contents: read
       pages: write
@@ -34,12 +34,12 @@ jobs:
         uses: withastro/action@44706356b4eb735f8b9035699eb4796241a040c4 # v6.1.0
         with:
           path: blog.guitarrapc.com
-          node-version: 22
+          node-version: 24
 
   deploy:
     needs: build
-    if: ${{ github.event_name != 'pull_request' }}
-    runs-on: ubuntu-latest
+    if: ${{ github.event_name == 'push' }}
+    runs-on: ubuntu-24.04
     permissions:
       contents: read
       pages: write
