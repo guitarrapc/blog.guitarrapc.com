@@ -5,9 +5,8 @@ on:
     branches: [main]
   pull_request:
     branches: [main]
-  # Allows you to run this workflow manually from the Actions tab on GitHub.
+  workflow_dispatch:
 
-  workflow_dispatch: null
 jobs:
   build:
     runs-on: ubuntu-24.04
